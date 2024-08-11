@@ -70,7 +70,8 @@ module.exports = async function standardVersion(argv) {
       };
       break;
     } catch (err) {
-      /* This probably shouldn't be empty? */
+      printError(args, err.message);
+      throw err;
     }
   }
   try {
